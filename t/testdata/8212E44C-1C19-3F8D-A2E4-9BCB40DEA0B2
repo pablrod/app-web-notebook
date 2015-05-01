@@ -1,0 +1,380 @@
+$VAR1 = {
+          'worksheets' => [
+                            [
+                              {
+                                'result' => '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14]',
+                                'code' => 'use PDL;
+sequence 15;'
+                              },
+                              {
+                                'result' => '<?xml version="1.0" encoding="utf-8"  standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 
+ width="600" height="480" 
+ viewBox="0 0 600 480"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+
+<title>Gnuplot</title>
+<desc>Produced by GNUPLOT 4.6 patchlevel 1 </desc>
+
+<g id="gnuplot_canvas">
+
+<rect x="0" y="0" width="600" height="480" fill="none"/>
+<defs>
+
+	<circle id=\'gpDot\' r=\'0.5\' stroke-width=\'0.5\'/>
+	<path id=\'gpPt0\' stroke-width=\'0.222\' stroke=\'currentColor\' d=\'M-1,0 h2 M0,-1 v2\'/>
+	<path id=\'gpPt1\' stroke-width=\'0.222\' stroke=\'currentColor\' d=\'M-1,-1 L1,1 M1,-1 L-1,1\'/>
+	<path id=\'gpPt2\' stroke-width=\'0.222\' stroke=\'currentColor\' d=\'M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1\'/>
+	<rect id=\'gpPt3\' stroke-width=\'0.222\' stroke=\'currentColor\' x=\'-1\' y=\'-1\' width=\'2\' height=\'2\'/>
+	<rect id=\'gpPt4\' stroke-width=\'0.222\' stroke=\'currentColor\' fill=\'currentColor\' x=\'-1\' y=\'-1\' width=\'2\' height=\'2\'/>
+	<circle id=\'gpPt5\' stroke-width=\'0.222\' stroke=\'currentColor\' cx=\'0\' cy=\'0\' r=\'1\'/>
+	<use xlink:href=\'#gpPt5\' id=\'gpPt6\' fill=\'currentColor\' stroke=\'none\'/>
+	<path id=\'gpPt7\' stroke-width=\'0.222\' stroke=\'currentColor\' d=\'M0,-1.33 L-1.33,0.67 L1.33,0.67 z\'/>
+	<use xlink:href=\'#gpPt7\' id=\'gpPt8\' fill=\'currentColor\' stroke=\'none\'/>
+	<use xlink:href=\'#gpPt7\' id=\'gpPt9\' stroke=\'currentColor\' transform=\'rotate(180)\'/>
+	<use xlink:href=\'#gpPt9\' id=\'gpPt10\' fill=\'currentColor\' stroke=\'none\'/>
+	<use xlink:href=\'#gpPt3\' id=\'gpPt11\' stroke=\'currentColor\' transform=\'rotate(45)\'/>
+	<use xlink:href=\'#gpPt11\' id=\'gpPt12\' fill=\'currentColor\' stroke=\'none\'/>
+</defs>
+<g style="fill:none; color:white; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path  d=\'M53.9,444.0 L62.9,444.0 M575.0,444.0 L566.0,444.0  h0.01\'/>	<g transform="translate(45.6,448.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 1</text>
+	</g>
+	<path  d=\'M53.9,372.8 L62.9,372.8 M575.0,372.8 L566.0,372.8  h0.01\'/>	<g transform="translate(45.6,377.3)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 1.5</text>
+	</g>
+	<path  d=\'M53.9,301.6 L62.9,301.6 M575.0,301.6 L566.0,301.6  h0.01\'/>	<g transform="translate(45.6,306.1)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 2</text>
+	</g>
+	<path  d=\'M53.9,230.3 L62.9,230.3 M575.0,230.3 L566.0,230.3  h0.01\'/>	<g transform="translate(45.6,234.8)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 2.5</text>
+	</g>
+	<path  d=\'M53.9,159.1 L62.9,159.1 M575.0,159.1 L566.0,159.1  h0.01\'/>	<g transform="translate(45.6,163.6)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 3</text>
+	</g>
+	<path  d=\'M53.9,87.9 L62.9,87.9 M575.0,87.9 L566.0,87.9  h0.01\'/>	<g transform="translate(45.6,92.4)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 3.5</text>
+	</g>
+	<path  d=\'M53.9,16.7 L62.9,16.7 M575.0,16.7 L566.0,16.7  h0.01\'/>	<g transform="translate(45.6,21.2)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 4</text>
+	</g>
+	<path  d=\'M53.9,444.0 L53.9,435.0 M53.9,16.7 L53.9,25.7  h0.01\'/>	<g transform="translate(53.9,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 1</text>
+	</g>
+	<path  d=\'M140.8,444.0 L140.8,435.0 M140.8,16.7 L140.8,25.7  h0.01\'/>	<g transform="translate(140.8,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 1.5</text>
+	</g>
+	<path  d=\'M227.6,444.0 L227.6,435.0 M227.6,16.7 L227.6,25.7  h0.01\'/>	<g transform="translate(227.6,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 2</text>
+	</g>
+	<path  d=\'M314.5,444.0 L314.5,435.0 M314.5,16.7 L314.5,25.7  h0.01\'/>	<g transform="translate(314.5,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 2.5</text>
+	</g>
+	<path  d=\'M401.3,444.0 L401.3,435.0 M401.3,16.7 L401.3,25.7  h0.01\'/>	<g transform="translate(401.3,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 3</text>
+	</g>
+	<path  d=\'M488.2,444.0 L488.2,435.0 M488.2,16.7 L488.2,25.7  h0.01\'/>	<g transform="translate(488.2,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 3.5</text>
+	</g>
+	<path  d=\'M575.0,444.0 L575.0,435.0 M575.0,16.7 L575.0,25.7  h0.01\'/>	<g transform="translate(575.0,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 4</text>
+	</g>
+	<path  d=\'M53.9,16.7 L53.9,444.0 L575.0,444.0 L575.0,16.7 L53.9,16.7 Z  h0.01\'/></g>
+	<g id="gnuplot_plot_1" ><title>gnuplot_plot_1</title>
+<g style="fill:none; color:red; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path  d=\'M53.9,444.0 L227.6,444.0 L227.6,301.6 L401.3,301.6 L401.3,159.1 L575.0,159.1 L575.0,16.7  h0.01\'/></g>
+	</g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path  d=\'M53.9,16.7 L53.9,444.0 L575.0,444.0 L575.0,16.7 L53.9,16.7 Z  h0.01\'/></g>
+</g>
+</svg>
+
+',
+                                'code' => 'use Chart::Gnuplot;
+use Path::Tiny;
+my $archivo = Path::Tiny->tempfile();
+my $plot = Chart::Gnuplot->new(terminal => \'svg\', output => $archivo);
+my $data = Chart::Gnuplot::DataSet->new(xdata => [1, 2, 3, 4], ydata => [1, 2, 3, 4], style => \'steps\');
+$plot->plot2d($data);
+$archivo->slurp()'
+                              },
+                              {
+                                'result' => '<canvas id=grafico_gnuplot width="600" height="400"></canvas><script>function grafico_gnuplot() {
+canvas = document.getElementById("grafico_gnuplot");
+ctx = canvas.getContext("2d");
+// Reinitialize mouse tracking and zoom for this particular plot
+if ((typeof(gnuplot.active_plot) == "undefined" || gnuplot.active_plot != grafico_gnuplot)  &&  typeof(gnuplot.mouse_update) != "undefined") {
+  gnuplot.active_plot_name = "grafico_gnuplot";
+  gnuplot.active_plot = grafico_gnuplot;
+  canvas.onmousemove = gnuplot.mouse_update;
+  canvas.onmouseup = gnuplot.zoom_in;
+  canvas.onmousedown = gnuplot.saveclick;
+  canvas.onkeypress = gnuplot.do_hotkey;
+  if (canvas.attachEvent) {canvas.attachEvent(\'mouseover\', grafico_gnuplot);}
+  else if (canvas.addEventListener) {canvas.addEventListener(\'mouseover\', grafico_gnuplot, false);} 
+  gnuplot.zoomed = false;
+  gnuplot.zoom_axis_width = 0;
+  gnuplot.zoom_in_progress = false;
+  gnuplot.polar_mode = false;
+  ctx.clearRect(0,0,600,400);
+}
+// Gnuplot version 4.6.1
+// short forms of commands provided by gnuplot_common.js
+function DT  (dt)  {gnuplot.dashtype(dt);};
+function DS  (x,y) {gnuplot.dashstart(x,y);};
+function DL  (x,y) {gnuplot.dashstep(x,y);};
+function M   (x,y) {if (gnuplot.pattern.length > 0) DS(x,y); else gnuplot.M(x,y);};
+function L   (x,y) {if (gnuplot.pattern.length > 0) DL(x,y); else gnuplot.L(x,y);};
+function Dot (x,y) {gnuplot.Dot(x/10.,y/10.);};
+function Pt  (N,x,y,w) {gnuplot.Pt(N,x/10.,y/10.,w/10.);};
+function R   (x,y,w,h) {gnuplot.R(x,y,w,h);};
+function T   (x,y,fontsize,justify,string) {gnuplot.T(x,y,fontsize,justify,string);};
+function TR  (x,y,angle,fontsize,justify,string) {gnuplot.TR(x,y,angle,fontsize,justify,string);};
+function bp  (x,y) {gnuplot.bp(x,y);};
+function cfp () {gnuplot.cfp();};
+function cfsp() {gnuplot.cfsp();};
+
+ctx.lineCap = "butt"; ctx.lineJoin = "miter";
+CanvasTextFunctions.enable(ctx);
+ctx.strokeStyle = "rgb(215,215,215)";
+ctx.lineWidth = 1;
+
+ctx.lineWidth = 1;
+ctx.strokeStyle = "rgb(000,000,000)";
+ctx.beginPath();
+M(360,3800);
+L(460,3800);
+M(5759,3800);
+L(5659,3800);
+ctx.stroke();
+ctx.closePath();
+T(280,3850,10.0,"Right"," 0");
+ctx.beginPath();
+M(360,3396);
+L(460,3396);
+M(5759,3396);
+L(5659,3396);
+ctx.stroke();
+ctx.closePath();
+T(280,3446,10.0,"Right"," 1");
+ctx.beginPath();
+M(360,2991);
+L(460,2991);
+M(5759,2991);
+L(5659,2991);
+ctx.stroke();
+ctx.closePath();
+T(280,3041,10.0,"Right"," 2");
+ctx.beginPath();
+M(360,2587);
+L(460,2587);
+M(5759,2587);
+L(5659,2587);
+ctx.stroke();
+ctx.closePath();
+T(280,2637,10.0,"Right"," 3");
+ctx.beginPath();
+M(360,2183);
+L(460,2183);
+M(5759,2183);
+L(5659,2183);
+ctx.stroke();
+ctx.closePath();
+T(280,2233,10.0,"Right"," 4");
+ctx.beginPath();
+M(360,1778);
+L(460,1778);
+M(5759,1778);
+L(5659,1778);
+ctx.stroke();
+ctx.closePath();
+T(280,1828,10.0,"Right"," 5");
+ctx.beginPath();
+M(360,1374);
+L(460,1374);
+M(5759,1374);
+L(5659,1374);
+ctx.stroke();
+ctx.closePath();
+T(280,1424,10.0,"Right"," 6");
+ctx.beginPath();
+M(360,970);
+L(460,970);
+M(5759,970);
+L(5659,970);
+ctx.stroke();
+ctx.closePath();
+T(280,1020,10.0,"Right"," 7");
+ctx.beginPath();
+M(360,565);
+L(460,565);
+M(5759,565);
+L(5659,565);
+ctx.stroke();
+ctx.closePath();
+T(280,615,10.0,"Right"," 8");
+ctx.beginPath();
+M(360,161);
+L(460,161);
+M(5759,161);
+L(5659,161);
+ctx.stroke();
+ctx.closePath();
+T(280,211,10.0,"Right"," 9");
+ctx.beginPath();
+M(360,3800);
+L(360,3700);
+M(360,161);
+L(360,261);
+ctx.stroke();
+ctx.closePath();
+T(360,3950,10.0,"Center"," 0");
+ctx.beginPath();
+M(960,3800);
+L(960,3700);
+M(960,161);
+L(960,261);
+ctx.stroke();
+ctx.closePath();
+T(960,3950,10.0,"Center"," 1");
+ctx.beginPath();
+M(1560,3800);
+L(1560,3700);
+M(1560,161);
+L(1560,261);
+ctx.stroke();
+ctx.closePath();
+T(1560,3950,10.0,"Center"," 2");
+ctx.beginPath();
+M(2160,3800);
+L(2160,3700);
+M(2160,161);
+L(2160,261);
+ctx.stroke();
+ctx.closePath();
+T(2160,3950,10.0,"Center"," 3");
+ctx.beginPath();
+M(2760,3800);
+L(2760,3700);
+M(2760,161);
+L(2760,261);
+ctx.stroke();
+ctx.closePath();
+T(2760,3950,10.0,"Center"," 4");
+ctx.beginPath();
+M(3359,3800);
+L(3359,3700);
+M(3359,161);
+L(3359,261);
+ctx.stroke();
+ctx.closePath();
+T(3359,3950,10.0,"Center"," 5");
+ctx.beginPath();
+M(3959,3800);
+L(3959,3700);
+M(3959,161);
+L(3959,261);
+ctx.stroke();
+ctx.closePath();
+T(3959,3950,10.0,"Center"," 6");
+ctx.beginPath();
+M(4559,3800);
+L(4559,3700);
+M(4559,161);
+L(4559,261);
+ctx.stroke();
+ctx.closePath();
+T(4559,3950,10.0,"Center"," 7");
+ctx.beginPath();
+M(5159,3800);
+L(5159,3700);
+M(5159,161);
+L(5159,261);
+ctx.stroke();
+ctx.closePath();
+T(5159,3950,10.0,"Center"," 8");
+ctx.beginPath();
+M(5759,3800);
+L(5759,3700);
+M(5759,161);
+L(5759,261);
+ctx.stroke();
+ctx.closePath();
+T(5759,3950,10.0,"Center"," 9");
+ctx.beginPath();
+M(360,161);
+L(360,3800);
+L(5759,3800);
+L(5759,161);
+L(360,161);
+ctx.closePath();
+ctx.stroke();
+if (typeof(gnuplot.hide_grafico_gnuplot_plot_1) == "undefined"|| !gnuplot.hide_grafico_gnuplot_plot_1) {
+ctx.strokeStyle = "rgb(255,000,000)";
+ctx.beginPath();
+M(360,3800);
+L(960,3396);
+L(1560,2991);
+L(2160,2587);
+L(2760,2183);
+L(3359,1778);
+L(3959,1374);
+L(4559,970);
+L(5159,565);
+L(5759,161);
+ctx.stroke();
+ctx.closePath();
+} // End grafico_gnuplot_plot_1 
+ctx.lineWidth = 1;
+ctx.strokeStyle = "rgb(000,000,000)";
+ctx.beginPath();
+M(360,161);
+L(360,3800);
+L(5759,3800);
+L(5759,161);
+L(360,161);
+ctx.closePath();
+ctx.stroke();
+
+// plot boundaries and axis scaling information for mousing 
+gnuplot.plot_term_xmax = 600;
+gnuplot.plot_term_ymax = 400;
+gnuplot.plot_xmin = 36.0;
+gnuplot.plot_xmax = 575.9;
+gnuplot.plot_ybot = 380.0;
+gnuplot.plot_ytop = 16.1;
+gnuplot.plot_width = 539.9;
+gnuplot.plot_height = 363.9;
+gnuplot.plot_axis_xmin = 0;
+gnuplot.plot_axis_xmax = 9;
+gnuplot.plot_axis_ymin = 0;
+gnuplot.plot_axis_ymax = 9;
+gnuplot.plot_axis_x2min = "none"
+gnuplot.plot_axis_y2min = "none"
+gnuplot.plot_logaxis_x = 0;
+gnuplot.plot_logaxis_y = 0;
+gnuplot.plot_axis_width = gnuplot.plot_axis_xmax - gnuplot.plot_axis_xmin;
+gnuplot.plot_axis_height = gnuplot.plot_axis_ymax - gnuplot.plot_axis_ymin;
+gnuplot.plot_timeaxis_x = "";
+}
+ grafico_gnuplot();</script>',
+                                'code' => 'use PDL;
+use Path::Tiny;
+use PDL::Graphics::Gnuplot;
+my $otro_archivo = Path::Tiny->tempfile();
+my $secuencia = sequence(10);
+gplot(terminal => "canvas name \'grafico_gnuplot\'", output => "$otro_archivo", $secuencia);
+my $grafico = \'<canvas id=grafico_gnuplot width="600" height="400"></canvas><script>\' . $otro_archivo->slurp() . " grafico_gnuplot();</script>";
+#$grafico;
+'
+                              }
+                            ]
+                          ],
+          'id' => '8212E44C-1C19-3F8D-A2E4-9BCB40DEA0B2'
+        };
