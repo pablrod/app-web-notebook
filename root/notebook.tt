@@ -1,0 +1,18 @@
+[% WRAPPER page.tt title = c.config.name head = "
+<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.2.0/codemirror.min.css\">
+<script src=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.2.0/codemirror.min.js\"></script>
+<script src=\"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.2.0/mode/perl/perl.min.js\"></script>
+<script src=\"notebook.js\"></script>
+<script src=\"gnuplot/canvastext.js\"></script>
+<script src=\"gnuplot/gnuplot_common.js\"></script>
+" %]
+<script>
+var notebook_id = "[% notebook_id %]";
+require(["dojo/domReady!"], function () {
+    LoadNotebook(notebook_id);
+});
+</script>
+<script src="menu.js"></script>
+<div id="notebook_menu"></div>
+
+[% END %]

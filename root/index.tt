@@ -1,0 +1,92 @@
+[% WRAPPER page.tt title = c.config.name %]
+<script>
+require([
+    "dijit/MenuBar",
+    "dijit/PopupMenuBarItem",
+    "dijit/Menu",
+    "dijit/MenuItem",
+    "dijit/DropDownMenu",
+    "dojo/store/Memory",
+    "dijit/tree/ObjectStoreModel", 
+    "dijit/Tree",
+    "dojo/domReady!"
+], function(MenuBar, PopupMenuBarItem, Menu, MenuItem, DropDownMenu, Memory, ObjectStoreModel, Tree){
+    var pMenuBar = new MenuBar({});
+
+    var pSubMenu = new DropDownMenu({});
+    var menu_item = 
+    pSubMenu.addChild(new MenuItem({
+        label: "New...",
+        onClick: function () {
+            alert("Nuevo notebook");
+        }
+    }));
+    pSubMenu.addChild(new MenuItem({
+        label: "Delete..."
+    }));
+    pMenuBar.addChild(new PopupMenuBarItem({
+        label: "Notebook",
+        popup: pSubMenu
+    }));
+
+    var pSubMenu2 = new DropDownMenu({});
+    pSubMenu2.addChild(new MenuItem({
+        label: "Cut",
+        iconClass: "dijitEditorIcon dijitEditorIconCut"
+    }));
+    pSubMenu2.addChild(new MenuItem({
+        label: "Copy",
+        iconClass: "dijitEditorIcon dijitEditorIconCopy"
+    }));
+    pSubMenu2.addChild(new MenuItem({
+        label: "Paste",
+        iconClass: "dijitEditorIcon dijitEditorIconPaste"
+    }));
+    pMenuBar.addChild(new PopupMenuBarItem({
+        label: "Edit",
+        popup: pSubMenu2
+    }));
+
+    pMenuBar.placeAt("wrapper");
+    pMenuBar.startup();
+    
+    var myStore = new Memory ({
+        data: [{id: 'root', name: 'Notebooks'},
+        {id: '8212E44C-1C19-3F8D-A2E4-9BCB40DEA0B2', name: 'Notebook 1', parent:'root'}
+        ],
+        getChildren : function(object) {
+            return this.query({parent: object.id});
+        }
+    });
+    // Create the model
+    var myModel = new ObjectStoreModel({
+        store: myStore,
+        query: {id: 'root'}
+    });
+
+    // Create the Tree.
+    var tree = new Tree({
+        model: myModel,
+        onClick: function(item) {
+           // Crear un formulario al vuelo 
+           var form = document.createElement("form");
+            form.setAttribute("method", 'POST');
+            form.setAttribute("action", '/notebook');
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", 'notebook_id');
+            hiddenField.setAttribute("value", item.id);
+            form.appendChild(hiddenField);
+            document.body.appendChild(form);
+            form.submit();
+
+        }
+    });
+    tree.placeAt("notebooks");
+    tree.startup();
+    
+});
+	</script>
+<div id="wrapper"></div>
+<div id="notebooks"></div>
+[% END %]
