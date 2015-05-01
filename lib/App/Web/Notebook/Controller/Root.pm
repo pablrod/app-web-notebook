@@ -92,6 +92,8 @@ sub save :Local {
     my ( $self, $c ) = @_;
     my $notebook_id = $c->req->body_params->{'notebook_id'};
     $c->model('NotebookManager')->SaveById($notebook_id);
+    $c->stash(status => 'Ok');
+    $c->stash->{current_view} = 'Notebook::API';
 }
 
 
