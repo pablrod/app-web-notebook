@@ -16,17 +16,17 @@ Javascript libraries content delivery provided by:
 - [cdnjs](https://cdnjs.com/): CodeMirror
 - [Google Hosted Libraries](https://developers.google.com/speed/libraries/): Dojo
 
-    # SEE ALSO
+# SEE ALSO
 
-    [Catalyst](http://www.catalystframework.org/), [Devel::REPL](https://metacpan.org/pod/Devel::REPL), [CodeMirror](https://codemirror.net/), [cdnjs](https://cdnjs.com/)
+[Catalyst](http://www.catalystframework.org/), [Devel::REPL](https://metacpan.org/pod/Devel::REPL), [CodeMirror](https://codemirror.net/), [cdnjs](https://cdnjs.com/)
 
-    # AUTHOR
+# AUTHOR
 
-    Pablo Rodríguez González
+Pablo Rodríguez González
 
-    # LICENSE
+# LICENSE
 
-    This program is free software; you
-    can redistribute it and/or modify it under the terms of the
-    Artistic License 2.0. For details, see the full text of the
-    license in the file LICENSE.
+This program is free software; you
+can redistribute it and/or modify it under the terms of the
+Artistic License 2.0. For details, see the full text of the
+license in the file LICENSE.
