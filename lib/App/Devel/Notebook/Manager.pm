@@ -25,6 +25,13 @@ has 'notebooks' => ( is      => 'rw',
                      default => sub { return {}; }
 );
 
+has 'savepath' => ( is => 'rw',
+					isa => 'Str',
+					writer => '_SavePath',
+					reader => 'SavePath',
+					default => '~/.perlnotebooks'
+);
+
 =head1 METHODS
 
 =cut
@@ -32,8 +39,8 @@ has 'notebooks' => ( is      => 'rw',
 # On Build load existing notebooks
 sub BUILD {
     my $self = shift;
-    path('~/.perlnotebooks')->mkpath;
-    my @files     = path('~/.perlnotebooks')->children;
+    path($self->SavePath())->mkpath;
+    my @files     = path($self->SavePath())->children;
     my $notebooks = {};
     for my $file (@files) {
         my $notebook = App::Devel::Notebook->FromDump( $file->slurp_raw );
@@ -74,8 +81,7 @@ sub _Add {
     my $self           = shift;
     my $notebooks      = shift;
     my $uuid_generator = Data::UUID->new;
-    my $package_name   = __PACKAGE__;
-    my $id             = $uuid_generator->create_from_name_str( $package_name, 'Notebook' );
+    my $id             = $uuid_generator->create_from_name_str( $uuid_generator->create_str(), 'Notebook' );
     $notebooks->{$id} = App::Devel::Notebook->new( id => $id );
     return ();
 }
@@ -103,7 +109,7 @@ sub Delete {
     my $notebook_id = shift;
     my $notebooks   = $self->Notebooks;
     delete $notebooks->{$notebook_id};
-    path('~/.perlnotebooks')->child($notebook_id)->remove;
+    path($self->SavePath())->child($notebook_id)->remove;
     return ();
 }
 
@@ -117,7 +123,7 @@ sub SaveById {
 sub Save {
     my $self     = shift;
     my $notebook = shift;
-    my $path     = path('~/.perlnotebooks');
+    my $path     = path($self->SavePath());
     my $file     = $path->child( $notebook->Id() );
     $file->spew_raw( $notebook->Dump() );
 }
