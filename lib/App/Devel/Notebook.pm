@@ -1,9 +1,9 @@
 package App::Devel::Notebook;
 
 use Moose;
-use Devel::REPL;
 use App::Devel::Notebook::Cell;
 use App::Devel::Notebook::Worksheet;
+use App::Devel::Notebook::Engine::Devel::REPL;
 use Params::Validate qw(:all);
 use Data::Dumper;
 use namespace::autoclean;
@@ -30,13 +30,11 @@ has 'id' => ( is     => 'ro',
               reader => 'Id'
 );
 
-has 'repl' => (
+has 'engine' => (
     is      => 'ro',
-    isa     => 'Devel::REPL',
+    isa     => 'App::Devel::Notebook::Engine',
     default => sub {
-        my $repl = Devel::REPL->new;
-        $repl->load_plugin($_) for qw(LexEnv);
-        return $repl;
+        return App::Devel::Notebook::Engine::Devel::REPL->new();
     },
     lazy => 1
 );
@@ -57,7 +55,7 @@ sub Execute {
     my $cell      = shift;
     my $code      = shift;
     $self->CellCode( worksheet => $worksheet - 1, cell => $cell - 1, code => $code );
-    my @ret = $self->repl->formatted_eval($code);
+    my @ret = $self->engine->Execute($code);
     $self->CellResult( worksheet => $worksheet - 1, cell => $cell - 1, result => join( '', @ret ) );
     return @ret;
 }
